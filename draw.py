@@ -1,19 +1,23 @@
 import pygame
 import time
 
-SIZE = 800
-WIDTH = SIZE if SIZE != 0 else      1300
-HEIGHT = SIZE if SIZE != 0 else     800
-SLEEP = 0.1
-WAIT = 5
-CIRCLE = False
-N = 40
-black = (0,0,0)
-pink = (255,200,200)
+# EDIT THESE:
+SIZE = 800      # if set other than 0, square screen size
+WIDTH = SIZE if SIZE != 0 else      1300    # screen width
+HEIGHT = SIZE if SIZE != 0 else     800     # screen height
+SLEEP = 0.1     # sleep after each line drawn
+WAIT = 5        # sleep at end of execution
+CIRCLE = False  # draw circles to compare at end
+N = 250          # total number of lines
+black = (0,0,0)         # colors
+pink = (255,200,200)    # colors
+FILL_COLOR = pink       # background color
+LINE_COLOR = black      # line color
+
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH,HEIGHT))
-screen.fill(pink)
+screen.fill(FILL_COLOR)
 pygame.display.update()
 
 mod_H = HEIGHT/2    # halfway
@@ -27,7 +31,7 @@ for i in range(n):
     xto = (i + 1) * (mod_W/n)
     yto = HEIGHT
     print(i, xfrom, yfrom, xto, yto)
-    pygame.draw.line(screen, black, (xfrom, yfrom), (xto, yto), 1)
+    pygame.draw.line(screen, LINE_COLOR, (xfrom, yfrom), (xto, yto), 1)
     pygame.display.update()
     time.sleep(SLEEP)
 
@@ -38,7 +42,7 @@ for i in range(n):
     xto = WIDTH
     yto = HEIGHT - (i + 1) * (mod_H/n)
     print(i, xfrom, yfrom, xto, yto)
-    pygame.draw.line(screen, black, (xfrom, yfrom), (xto, yto), 1)
+    pygame.draw.line(screen, LINE_COLOR, (xfrom, yfrom), (xto, yto), 1)
     pygame.display.update()
     time.sleep(SLEEP)
 
@@ -49,7 +53,7 @@ for i in range(n):
     xto = WIDTH - (i + 1) * (mod_W/n)
     yto = 0
     print(i, xfrom, yfrom, xto, yto)
-    pygame.draw.line(screen, black, (xfrom, yfrom), (xto, yto), 1)
+    pygame.draw.line(screen, LINE_COLOR, (xfrom, yfrom), (xto, yto), 1)
     pygame.display.update()
     time.sleep(SLEEP)
 
@@ -59,7 +63,7 @@ for i in range(n):
     yfrom = 0
     xto = 0
     yto = (i + 1) * (mod_H/n)
-    pygame.draw.line(screen, black, (xfrom, yfrom), (xto, yto), 1)
+    pygame.draw.line(screen, LINE_COLOR, (xfrom, yfrom), (xto, yto), 1)
     pygame.display.update()
     time.sleep(SLEEP)
 
