@@ -1,5 +1,4 @@
 import pygame
-import sys
 import time
 
 SIZE = 800
