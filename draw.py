@@ -24,6 +24,7 @@ mod_H = HEIGHT/2    # halfway
 mod_W = WIDTH/2     # halfway
 n = int(N/4)        # each corner
 
+
 # bottom left
 for i in range(n):
     xfrom = 0
