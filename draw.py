@@ -7,7 +7,7 @@ WIDTH = SIZE if SIZE != 0 else      1300    # screen width
 HEIGHT = SIZE if SIZE != 0 else     800     # screen height
 SLEEP = 0.1     # sleep after each line drawn
 WAIT = 5        # sleep at end of execution
-CIRCLE = False  # draw circles to compare at end
+CIRCLE = True   # draw circles to compare at end
 N = 250          # total number of lines
 black = (0,0,0)         # colors
 pink = (255,200,200)    # colors
